@@ -1,5 +1,16 @@
 ---
 - name: Converge
   hosts: all
+
+  vars:
+    my_user: jerry
+
+  pre_tasks:
+    - name: Create the user that will use the files
+      user:
+        name: "{{ my_user }}"
+
   roles:
     - role: ansible-role-editor
+      vars:
+        vimfiles_user: "{{ my_user }}"

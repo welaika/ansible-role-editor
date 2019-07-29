@@ -1,2 +1,6 @@
 ---
-# defaults file for ansible-role-editor
+vimfiles_repo: https://github.com/welaika/server_vimfiles.git
+vimfiles_dependencies:
+  - vim
+  - git
+  - silversearcher-ag

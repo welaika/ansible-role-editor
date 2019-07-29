@@ -1,7 +1,11 @@
-Role Name
-=========
+Ansible Role Editor
+===================
 
-A brief description of the role goes here.
+[![Build Status](https://travis-ci.org/welaika/ansible-role-editor.svg?branch=master)](https://travis-ci.org/welaika/ansible-role-editor)
+
+Install vimfiles for a specific user.
+
+Vimfiles are fetch from a git repository.
 
 Requirements
 ------------
@@ -39,10 +43,20 @@ passed in as parameters) is always nice for users too:
 License
 -------
 
-BSD
+MIT
+
+Testing
+-------
+
+Install molecule
+
+`$ pip3 install --user 'molecule[docker]'`
+
+Start docker and run
+
+`$ molecule test`
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a
-website (HTML is not allowed).
+made with ❤️ and ☕️ by [weLaika](https://dev.welaika.com)

@@ -10,35 +10,33 @@ Vimfiles are fetch from a git repository.
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should
-be mentioned here. For instance, if the role uses the EC2 module, it may be a
-good idea to mention in this section that the boto package is required.
+Your vimfiles repository *must* have a `install.sh` files in it. Use it to create symlinks. This role won't create symlinks for you.
+
+The user **must** already exist.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including
-any variables that are in defaults/main.yml, vars/main.yml, and any variables
-that can/should be set via parameters to the role. Any variables that are read
-from other roles and/or the global scope (ie. hostvars, group vars, etc.) should
-be mentioned here as well.
+These are the default variables:
+
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in
-regards to parameters that may need to be set for other roles, or variables that
-are used from other roles.
+Node :)
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables
-passed in as parameters) is always nice for users too:
+User `john_doe` *must* already exist.
 
-    - hosts: servers
-      roles:
-         - { role: ansible-role-editor, x: 42 }
+```yaml
+- hosts: servers
+  roles:
+     - role: ansible-role-editor
+       vars:
+         vimfiles_user: "john_doe"
+```
 
 License
 -------

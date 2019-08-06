@@ -23,7 +23,7 @@ These are the default variables:
 Dependencies
 ------------
 
-Node :)
+None :)
 
 Example Playbook
 ----------------

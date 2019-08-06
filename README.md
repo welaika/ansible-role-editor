@@ -19,6 +19,13 @@ Role Variables
 
 These are the default variables:
 
+```yaml
+vimfiles_repo: https://github.com/welaika/server_vimfiles.git
+vimfiles_dependencies:
+  - vim
+  - git
+  - silversearcher-ag
+```
 
 Dependencies
 ------------

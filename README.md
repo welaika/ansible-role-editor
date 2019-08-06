@@ -42,7 +42,7 @@ User `john_doe` *must* already exist.
   roles:
      - role: ansible-role-editor
        vars:
-         vimfiles_user: "john_doe"
+         vimfiles_user: "john_doe"  # mandatory
 ```
 
 License

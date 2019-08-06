@@ -8,16 +8,16 @@
 
 - name: Clone vimfiles
   become: yes
-  become_user: "{{ vimfiles_user }}"
+  become_user: "{{ vimfiles_user | mandatory }}"
   git:
     repo: "{{ vimfiles_repo }}"
     dest: "~/.vim"
     version: master
     update: no
 
-- name: "Install vimfiles for {{ vimfiles_user }}"
+- name: "Install vimfiles for {{ vimfiles_user | mandatory }}"
   become: yes
-  become_user: "{{ vimfiles_user }}"
+  become_user: "{{ vimfiles_user | mandatory }}"
   command: /bin/bash install.sh
   args:
     chdir: "~/.vim/"
